@@ -1,4 +1,3 @@
-// js/small_links.js
 (() => {
   const DATA_URL = "js/links.json";
   const LOGO_BASE = "img/";
@@ -60,7 +59,6 @@
     }));
   }
 
-  // util: enlever les accents
 function stripAccents(s) {
   return s.normalize('NFD').replace(/\p{Diacritic}/gu, '');
 }
@@ -73,7 +71,6 @@ function filterLinks(arr, q) {
     const title = stripAccents(it.title).toLowerCase();
     const tags  = it.tags.map(t => stripAccents(String(t)).toLowerCase());
 
-    // 👉 cherche uniquement dans titre + tags (pas les descriptions)
     return title.includes(qlc) || tags.some(t => t.includes(qlc));
   });
 }

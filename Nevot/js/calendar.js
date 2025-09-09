@@ -82,14 +82,14 @@
         alignItems:"center", justifyContent:"center"
       });
       const img = document.createElement("img");
-      img.src = iconPath;                          // ex: "img/prev.svg"
+      img.src = iconPath;
       img.alt = label;
-      img.width = 20; img.height = 20;             // ajuste si besoin
+      img.width = 20; img.height = 20;
       img.style.display = "block";
       btn.appendChild(img);
 
       btn.addEventListener("click", (e) => {
-        e.preventDefault(); e.stopPropagation();   // ← protège du refresh même dans un <form>
+        e.preventDefault(); e.stopPropagation();
         onClick();
       });
       return btn;
