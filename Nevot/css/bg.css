@@ -1,0 +1,65 @@
+/* Variables globales */
+:root {
+  --color-bg: #000;
+  --wave1-color: rgba(255, 0, 0, 0.4);
+  --wave2-color: rgba(0, 106, 255, 0.4);
+
+  --wave1-opacity: 0.6;
+  --wave2-opacity: 0.5;
+}
+
+/* Background */
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, var(--wave1-color), transparent 70%) repeat;
+  animation: moveWaves 24s ease-in-out infinite;
+  background-size: 60% 60%;
+  filter: blur(80px);
+  opacity: var(--wave1-opacity);
+  z-index: -1;
+}
+
+@keyframes moveWaves {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(10%, 10%) rotate(180deg);
+  }
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 80%, var(--wave2-color), transparent 70%) repeat;
+  animation: moveWaves2 18s ease-in-out infinite;
+  background-size: 50% 50%;
+  filter: blur(100px);
+  opacity: var(--wave2-opacity);
+  z-index: -1;
+}
+
+@keyframes moveWaves2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-10%, -15%) rotate(-180deg);
+  }
+}
