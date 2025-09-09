@@ -1,14 +1,4 @@
 (async () => {
-  // --- mini API loader
-  const Loader = {
-    show(){ document.body.classList.add("is-loading"); },
-    hide(){ document.body.classList.remove("is-loading"); },
-  };
-  window.Loader = Loader;
-
-  // On affiche le loader pendant l’injection des partials
-  Loader.show();
-
   const includes = document.querySelectorAll("[data-include]");
   await Promise.all([...includes].map(async el => {
     const url = el.getAttribute("data-include");
@@ -16,7 +6,7 @@
     el.innerHTML = await res.text();
   }));
 
-  // Une fois tous les partials insérés, on peut aussi mettre le titre
+  // Définition du titre de page
   let path = window.location.pathname;
   let page = path.split("/").pop() || "index";
   page = page.split(".")[0];
@@ -30,15 +20,8 @@
 
   const h1 = document.getElementById("title");
   if (h1) h1.textContent = finalTitle;
-
-  // Petit rAF pour éviter un flash à l’insertion
-  requestAnimationFrame(() => Loader.hide());
-
-  // Exemples d’usage ailleurs dans ton site :
-  // Loader.show();  // quand tu lances un fetch long
-  // Loader.hide();  // quand c'est fini
 })();
-  
+
 document.addEventListener("DOMContentLoaded", () => {
   const el = document.getElementById("date");
   if (!el) return;
