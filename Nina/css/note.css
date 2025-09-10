@@ -148,3 +148,5 @@
         width: 100%;
     }
 }
+
+#note-grid .note:not(.open) .collapse { display: none; }
