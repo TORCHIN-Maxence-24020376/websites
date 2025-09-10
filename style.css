@@ -1,0 +1,121 @@
+:root{
+    --background: linear-gradient(135deg,#040f29,#0f317f);
+    --background-secondary: #083364;
+}
+
+body{
+    background: var(--background);
+    padding: 50px;
+    min-height: 100vh;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.logo{
+    height: 20em;
+    transition: height 0.5s ease;
+    padding: 50px;
+}
+
+.logo.shrink {
+    height: 8em;
+}
+
+a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-secondary);
+    border-radius: 20px;
+    padding: 20px;
+    width: 10em;
+    height: 10em;
+    text-decoration: none;
+    color: white;
+    img{
+        width: 6em;
+        height: 6em;
+    }
+    transition: all ease-in-out 0.3s;
+    &:hover{
+        background-color: #205288;
+        transform: scale(1.05);
+    }
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 14px;
+    margin: 10px;
+    
+    border: none;
+    border-radius: 10px;
+    
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    color: var(--text, #fff);
+    font-size: 0.95rem;
+    
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) inset,
+                0 0 0 1px rgba(255,255,255,0.15);
+    
+    outline: none;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.18);
+    border-radius: 999px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.18) transparent;
+}
+
+.website-selector{
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+}
+
+.legend{
+    color: rgb(183, 183, 183);
+    text-align: center;
+    font-style: italic;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-secondary);
+    border-radius: 20px;
+    padding: 20px;
+    width: 90%;
+    margin-top: 5em;
+}

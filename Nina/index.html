@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cette page est le coeur du site LawDash. Elle permet d'accéder à toutes les informations principales du site.">
+    <title>LawDash - Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/links.css">
+    <link rel="stylesheet" href="css/note.css">
+    <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+</head>
+<body>
+    <canvas id="sky"></canvas>
+    <div data-include="partials/header.html"></div>
+    <main>
+        <h1 id="title"></h1>
+        <section>
+            <article>
+                <h3>Ressources</h3>
+                <input class="search-bar" id="resource-search" type="search" placeholder="Rechercher une resource..." autocomplete="On">
+                <div class="ressources-selector">
+                </div>
+            </article>
+
+            <article>
+                <div class="row">
+                    <h3>Notes</h3>
+                    <p class="info">(N'est pas conservé entre les appareils) <img src="img/info.svg" alt="Information"><span class="infobulle">Les notes écritent ici seront stockées en local.<br>C'est un petit pense bête dans l'immédiat</span></p>
+                </div>
+                <input class="search-bar" id="note-search" type="search" placeholder="Rechercher une Note..." autocomplete="On">
+                <div id="note-grid">
+                    <button class="ajout"><img src="img/add.svg" alt="Ajouter une note"></button>
+                </div>
+            </article>
+
+            <article>
+                <div class="row">
+                    <h3>EDT</h3>
+                    <p id="date"></p>
+                </div>
+                <div id="calendar-grid" class="calendar-grid"></div>
+            </article>
+        </section>
+    </main>
+    <div data-include="partials/footer.html"></div>
+    <script src="js/script.js"></script>
+    <script src="js/sky.js" defer></script>
+    <script src="js/small_links.js"></script>
+    <script src="js/today.js"></script>
+    <script src="js/notes.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Amétice",
+    "link": "https://ametice.univ-amu.fr/",
+    "tags": ["amu","ametice","plateforme","cours"],
+    "logo": "ametice.svg",
+    "description_long": "Plateforme pédagogique Amétice de l’Université d’Aix-Marseille : supports de cours, exercices et ressources complémentaires.",
+    "description_small": "Cours AMU"
+  },
+  {
+    "title": "Anki",
+    "link": "https://apps.ankiweb.net/",
+    "tags": ["révision","flashcards","mémoire"],
+    "logo": "anki.svg",
+    "description_long": "Outil de flashcards basé sur la répétition espacée pour mémoriser formules, réactions et définitions.",
+    "description_small": "Flashcards de révision"
+  },
+  {
+    "title": "Bibliothèque AMU",
+    "link": "https://bu.univ-amu.fr/",
+    "tags": ["amu","bu","bibliothèque","livres","revues"],
+    "logo": "books.svg",
+    "description_long": "Accès aux bibliothèques universitaires d’AMU : emprunts, ressources numériques, bases de données scientifiques.",
+    "description_small": "Livres & bases de données"
+  },
+  {
+    "title": "ChatGPT",
+    "link": "https://chatgpt.com",
+    "tags": ["ia","chat","gpt","ai","clanka","clanker","robot"],
+    "logo": "openai.svg",
+    "description_long": "ChatGPT est une IA utile pour avoir des explications rapides, simuler un professeur particulier ou réviser plus efficacement.",
+    "description_small": "IA pour parler et aider"
+  },
+  {
+    "title": "ENT AMU",
+    "link": "https://ent.univ-amu.fr/",
+    "tags": ["amu","ent","connexion","université"],
+    "logo": "ent.svg",
+    "description_long": "Portail numérique de l’Université d’Aix-Marseille, accès aux cours, emploi du temps, notes et services étudiants.",
+    "description_small": "Portail étudiant AMU"
+  },
+  {
+    "title": "Moodle AMU",
+    "link": "https://moodle.univ-amu.fr/",
+    "tags": ["amu","moodle","cours","plateforme"],
+    "logo": "moodle.svg",
+    "description_long": "Plateforme pédagogique AMU : supports de cours, devoirs en ligne, QCM et ressources des enseignants.",
+    "description_small": "Cours en ligne"
+  },
+  {
+    "title": "Notion",
+    "link": "https://www.notion.so/",
+    "tags": ["organisation","notes","planification","projets","productivité"],
+    "logo": "notion.svg",
+    "description_long": "Outil tout-en-un pour gérer ses cours, projets, notes et documents. Très pratique pour centraliser son organisation.",
+    "description_small": "Organisation & notes"
+  },
+  {
+    "title": "Google Docs",
+    "link": "https://docs.google.com/",
+    "tags": ["google","docs","texte","bureautique"],
+    "logo": "gdocs.svg",
+    "description_long": "Éditeur de texte en ligne collaboratif de Google, idéal pour rédiger et partager des documents.",
+    "description_small": "Traitement de texte"
+  },
+  {
+    "title": "Google Slides",
+    "link": "https://slides.google.com/",
+    "tags": ["google","slides","présentation","bureautique"],
+    "logo": "gslides.svg",
+    "description_long": "Service de création de présentations en ligne de Google, parfait pour exposés et diaporamas collaboratifs.",
+    "description_small": "Présentations"
+  },
+  {
+    "title": "Google Forms",
+    "link": "https://forms.google.com/",
+    "tags": ["google","forms","questionnaire","sondage"],
+    "logo": "gforms.svg",
+    "description_long": "Outil Google pour créer des formulaires, QCM ou enquêtes en ligne avec collecte automatique des réponses.",
+    "description_small": "Formulaires & sondages"
+  },
+  {
+    "title": "Google Sheets",
+    "link": "https://sheets.google.com/",
+    "tags": ["google","sheets","tableur","bureautique","excel"],
+    "logo": "gsheets.svg",
+    "description_long": "Tableur collaboratif en ligne de Google, utile pour gérer des données, faire des calculs et créer des graphiques.",
+    "description_small": "Tableur"
+  }
+]

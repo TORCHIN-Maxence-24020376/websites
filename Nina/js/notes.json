@@ -1,0 +1,9 @@
+[
+    {
+        "Titre" : "Tutoriel",
+        "Content" : "<h1>Les bases</h1><p>Ce site permet de se faciliter la vie dans tout ce qui concernera ses études, n'hésitez pas à faire des retours ou des demandes pour les améliorations.</p><p>C'est aussi une beta du <a href='https://torchin-maxence-24020376.github.io/Site-ETU/index.html' target='_blank'>Site ETU</a> lui aussi développé par Maxence Torchin.</p><h1>Fonctionnalités</h1><p>Ce site contient une section pour les liens avec la possibilités de rechercher des liens spécifiques avec une description, mais il contient aussi l'unique capacité de rediriger l'emploi du temps afin de permettre une alternative à <strong>ADE</strong> (réputé pour ses nombreuses difficultés d'accès pour les emplois du temps).<br>Il est aussi possible d'écrire des notes comme celle-ci afin d'avoir un pense bête local sur votre ordinateur.</p>",
+        "importance" : 10,
+        "editable" : false,
+        "timestamp" : 1755738659
+    }
+]
