@@ -46,9 +46,10 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        gap: 2em;
     }
 }
-  
+
 .name{
     font-weight: bold;
     font-size: 1em;
@@ -57,12 +58,13 @@
 .location{
     font-weight: bold;
     font-size: 0.8em;
+    color: orange;
 }
 
 .prof, .time{
-    color: var(--less-important-text);
     font-style: italic;
     font-size: 0.8em;
+    color: aquamarine;
 }
 
 @media (max-width: 768px) {
