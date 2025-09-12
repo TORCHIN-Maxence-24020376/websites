@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Logo ENT">
+  <!-- Cercle bleu -->
+  <circle cx="256" cy="256" r="256" fill="#0078ff"/>
+  <!-- Texte blanc parfaitement centré -->
+  <g transform="translate(256,256)">
+    <text text-anchor="middle" dy="0.35em"
+          font-family="Inter, Segoe UI, Roboto, Arial, sans-serif"
+          font-size="190" font-weight="600" fill="#ffffff">
+      ENT
+    </text>
+  </g>
+</svg>

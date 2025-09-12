@@ -19,5 +19,12 @@
     "logo" : "https://raw.githubusercontent.com/TORCHIN-Maxence-24020376/MedDash/refs/heads/main/img/icon.svg",
     "alt" : "Logo MedDash",
     "title" : "Un site pour Nicolas CHAUVET"
+  },
+  {
+    "nom" : "MAJIKA",
+    "lien": "Democratie/",
+    "logo": "logo.svg",
+    "alt" : "Logo ETU",
+    "title" : "Un site pour tout les clampins"
   }
 ]

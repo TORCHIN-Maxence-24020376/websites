@@ -1,0 +1,49 @@
+/* grille + scroll pour la liste */
+.ressources-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  
+    padding-right: 4px;  /* évite que la scrollbar ne mange le contenu */
+}
+
+/* Animations */
+@keyframes shake {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-5deg); }
+    50%  { transform: rotate(5deg); }
+    75%  { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.link{
+    backdrop-filter: blur(10px);           /* flou derrière */
+    -webkit-backdrop-filter: blur(10px);   /* compatibilité Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all ease-in-out 0.3s;
+    gap: 20px;
+    img{
+        width: 8em;
+        height: 8em;
+    }
+    &:hover{
+            background: rgba(255, 255, 255, 0.08); /* léger highlight */
+            transform: translateY(-3px);            /* petit lift */
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);          
+            img {
+                animation: shake 0.4s ease-in-out;
+            }
+    }
+    .name{
+        font-size: 1.8em;
+    }
+}
