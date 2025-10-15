@@ -1,0 +1,152 @@
+#note-grid{
+    background-color: var(--glass-bg-dark);
+    background: var(--glass-bg-dark);
+    backdrop-filter: blur(10px);           /* flou derrière */
+    -webkit-backdrop-filter: blur(10px);   /* compatibilité Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 5px;
+    padding: 1rem;
+    gap: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    overflow-y: scroll;
+}
+
+/* infobulle cachée par défaut */
+.infobulle {
+    position: absolute;
+    bottom: 125%;                /* au-dessus de l’icône */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 1000;
+}
+
+/* petite flèche */
+.infobulle::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.85) transparent transparent transparent;
+}
+
+.info {
+    position: relative; /* important pour positionner .infobulle */
+    font-style: italic;
+    font-size: 0.7em;
+    color: #c9c9c9;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    img {
+        height: 1.5em;
+    }
+    /* Affiche l’infobulle au hover */
+    &:hover .infobulle {
+        opacity: 1;
+    }
+}
+
+.note{
+    background-color: var(--glass-bg-dark);
+    background: var(--glass-bg-dark);
+    backdrop-filter: blur(10px);           /* flou derrière */
+    -webkit-backdrop-filter: blur(10px);   /* compatibilité Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    min-height: 4em;
+    max-height: 4em;                       /* fermée */
+    padding: 1em;
+    transition: all ease-in-out 0.3s;
+
+    overflow-y: hidden;                    /* on masque le contenu au départ */
+
+
+    /* état ouvert (au clic via JS) */
+    &.open{
+        background-color: rgb(70, 70, 70);
+        backdrop-filter: blur(5px);
+        min-height: 90%;
+        max-height: 30em;                  /* ajustable */
+        z-index: 1000 !important;
+        overflow-y: auto;
+    }
+
+    p {
+        display: none;
+        white-space: pre-wrap;             /* conserve les retours à la ligne */
+    }
+
+    &.open p{
+        display: block;
+    }
+
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0px solid white;
+        transition: all ease-in-out 0.3s;
+    }
+    
+    &.open div{
+        border-bottom: 2px solid white;
+    }
+
+    img{
+        width: 100%;
+        transition: all ease-in-out 0.3s;
+    }
+
+    a{
+        color: cyan;
+    }
+
+    h1{
+        color: orange
+    }
+}
+
+
+.ajout{
+    background-color: var(--glass-bg-dark);
+    background: var(--glass-bg-dark);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+    
+    display: flex;
+    justify-content: center;
+
+    img{
+        height: 2em;
+        width: 100%;
+    }
+}
+
+#note-grid .note:not(.open) .collapse { display: none; }

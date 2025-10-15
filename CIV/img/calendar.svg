@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Calendrier" width="24" height="24">
+  <title>Calendrier</title>
+  <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4" width="18" height="17" rx="2"/>
+    <line x1="8" y1="2" x2="8" y2="6"/>
+    <line x1="16" y1="2" x2="16" y2="6"/>
+    <line x1="3" y1="10" x2="21" y2="10"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="7" cy="14" r="1"/>
+    <circle cx="12" cy="14" r="1"/>
+    <circle cx="17" cy="14" r="1"/>
+    <circle cx="7" cy="18" r="1"/>
+    <circle cx="12" cy="18" r="1"/>
+    <circle cx="17" cy="18" r="1"/>
+  </g>
+</svg>

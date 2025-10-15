@@ -26,5 +26,12 @@
     "logo": "logo.svg",
     "alt" : "Logo ETU",
     "title" : "Un site pour tout les clampins"
+  },
+  {
+    "nom": "CIV-ETU",
+    "lien": "CIV/",
+    "logo": "logo.svg",
+    "alt" : "Logo ETU",
+    "title": "Un site pour les étudiants en deuxième année au CIV de Nice."
   }
 ]

@@ -1,0 +1,88 @@
+#calendar-grid{
+    background-color: var(--glass-bg-dark);
+    background: var(--glass-bg-dark);
+    backdrop-filter: blur(10px);           /* flou derrière */
+    -webkit-backdrop-filter: blur(10px);   /* compatibilité Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 5px;
+    padding: 1rem;
+
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.cour{
+    background-color: var(--glass-bg-dark);
+    background: var(--glass-bg-dark);
+    backdrop-filter: blur(10px);           /* flou derrière */
+    -webkit-backdrop-filter: blur(10px);   /* compatibilité Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 3rem;
+    min-height: 1px;
+    transition: all ease-in-out 0.3s;
+
+    overflow-y: scroll;
+
+    &:hover{
+        background-color: rgb(70, 70, 70);
+        backdrop-filter: blur(5px);
+        min-height: 8em;
+        z-index: 1000 !important;
+    }
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+    }
+}
+
+.name{
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.location{
+    font-weight: bold;
+    color: orange;
+    font-size: 0.8em;
+}
+
+.prof, .time{
+    font-style: italic;
+    font-size: 0.8em;
+    color: aquamarine;
+}
+
+
+
+#edt-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 1000; }
+#edt-modal.show { display: flex; }
+#edt-modal .backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.4); }
+#edt-modal .dialog { position: relative; width: min(600px, 90vw); max-height: min(80vh, 800px);
+    background-color: rgba(8, 99, 210); color: inherit; border-radius: 12px; padding: 16px; overflow: auto;
+    box-shadow: 0 12px 40px rgba(0,0,0,.25);
+}
+#edt-modal .close { position: absolute; top: 8px; right: 10px; font-size: 20px; background: transparent; border: 0; cursor: pointer; }
+
+@media (max-width: 768px) {
+
+    #calendar-grid{
+        .cour{
+            border-radius: 8px;
+            overflow: hidden;
+            .name{
+                font-size: 0.5em;
+            }
+            .prof, .time, .location{
+                font-size: 0.5em;
+            }
+        }
+    }
+}

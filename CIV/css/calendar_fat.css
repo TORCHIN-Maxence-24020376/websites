@@ -1,0 +1,155 @@
+/*Fichier CSS pour l'EDT*/
+
+#calendar-grid{
+    background-color: var(--glass-bg-dark);
+    background: var(--glass-bg-dark);
+    backdrop-filter: blur(10px);           /* flou derrière */
+    -webkit-backdrop-filter: blur(10px);   /* compatibilité Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 5px;
+    padding: 1rem;
+
+    height: 100%;
+    width: 100%;;
+    overflow-y: scroll;
+}
+
+.cour{
+    background-color: var(--glass-bg-dark);
+    background: var(--glass-bg-dark);
+    backdrop-filter: blur(10px);           /* flou derrière */
+    -webkit-backdrop-filter: blur(10px);   /* compatibilité Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 1px;
+    right: 0;
+    left: 0;
+    transition: all ease-in-out 0.3s;
+
+    overflow-y: scroll;
+
+    &:hover{
+        background-color: rgb(70, 70, 70);
+        backdrop-filter: blur(5px);
+        min-height: 13em;
+        z-index: 1000 !important;
+    }
+
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+
+    div{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+    }
+}
+
+.name{
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.location{
+    font-weight: bold;
+    font-size: 0.8em;
+    color: orange;
+}
+
+.prof, .time{
+    font-style: italic;
+    font-size: 0.8em;
+    color: aquamarine;
+}
+
+@media (max-width: 768px) {
+    .name{
+        font-size: 0.8em;
+    
+    }
+}
+
+.calendar-grid button img { width: 20px; height: 20px; }
+.calendar-grid button:hover { filter: brightness(1.1); }
+.calendar-grid button:active { transform: translateY(1px); }
+
+/* ===== Entête des jours (au-dessus de l'EDT) ========================= */
+.edt-days-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;               /* Doit matcher le gap horizontal de la grille */
+    margin: 0 0 0.25rem 0;
+}
+
+  /* espace à gauche pour aligner le header avec le rail des heures */
+.edt-days-header .hours-spacer {
+    flex: 0 0 64px;            /* même largeur que le rail des heures */
+}
+
+  /* ligne qui contient les libellés de jours */
+.edt-days-header .days-labels {
+    position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    gap: 0.5rem;               /* même gap que les colonnes de jours */
+}
+
+  /* cellule “jour” (doit matcher les colonnes : minWidth identique) */
+.edt-days-header .day-label {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+  /* date allégée à droite */
+.edt-days-header .day-label .date {
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+@media (max-width: 720px) {
+    .days-labels{
+        font-size: 0.5em;
+    }
+}
+
+.journalier{
+    margin-left: 3em;
+}
+
+#edt-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 1000; }
+#edt-modal.show { display: flex; }
+#edt-modal .backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.4); }
+#edt-modal .dialog { position: relative; width: min(600px, 90vw); max-height: min(80vh, 800px);
+    background-color: rgba(8, 99, 210); color: inherit; border-radius: 12px; padding: 16px; overflow: auto;
+    box-shadow: 0 12px 40px rgba(0,0,0,.25);
+}
+#edt-modal .close { position: absolute; top: 8px; right: 10px; font-size: 20px; background: transparent; border: 0; cursor: pointer; }
+
+@media (max-width: 768px) {
+
+    #calendar-grid{
+        .cour{
+            border-radius: 8px;
+            overflow: hidden;
+            .name{
+                font-size: 0.5em;
+            }
+            .prof, .time, .location{
+                font-size: 0.5em;
+            }
+        }
+    }
+}
