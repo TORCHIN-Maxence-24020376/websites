@@ -30,7 +30,7 @@
   {
     "nom": "CIV-ETU",
     "lien": "CIV/",
-    "logo": "logo.svg",
+    "logo": "CIV/img/icon.svg",
     "alt" : "Logo ETU",
     "title": "Un site pour les étudiants en deuxième année au CIV de Nice."
   }
